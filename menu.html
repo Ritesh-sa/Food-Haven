@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Food Haven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a class="brand" href="index.html">✦ Food Haven</a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="menu.html">Menu</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="admin.html">Admin</a>
+        <a class="nav-cart" href="#cart">
+            Cart <span id="cartCount">0</span>
+        </a>
+    </nav>
+</header>
+
+<main class="page-wrap">
+    <div class="page-title">
+        <span class="eyebrow">MADE FRESH, JUST FOR YOU</span>
+        <h1>Our <em>Menu</em></h1>
+        <p>Comfort food, fresh flavours, and something for every craving.</p>
+    </div>
+
+    <div class="menu-tools">
+        <input
+            type="search"
+            id="searchBox"
+            placeholder="Search dishes..."
+            aria-label="Search dishes"
+        >
+
+        <div class="filters" id="filters">
+            <button class="filter active" data-category="all">All Items</button>
+            <button class="filter" data-category="pizza">Pizza</button>
+            <button class="filter" data-category="burger">Burgers</button>
+            <button class="filter" data-category="dessert">Desserts</button>
+            <button class="filter" data-category="drinks">Drinks</button>
+        </div>
+    </div>
+
+    <div id="menuGrid" class="menu-grid"></div>
+
+    <section class="cart-panel" id="cart">
+        <div class="cart-head">
+            <div>
+                <span class="eyebrow">YOUR ORDER</span>
+                <h2>Your <em>Cart</em> <span id="cartCountBig">0</span></h2>
+            </div>
+
+            <button class="text-link" id="clearCart">Clear Cart</button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p class="empty-state">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cartTotal">₹0</strong>
+        </div>
+
+        <button class="btn btn-primary" id="placeOrder">
+            Place Order ↗
+        </button>
+
+        <p class="fine-print">
+            Demo project: no real payment is processed.
+        </p>
+
+        <p id="orderMessage" class="form-message"></p>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="brand" href="index.html">✦ Food Haven</a>
+    <p>Fresh food, warm hearts. © 2026 Food Haven</p>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="reservation.html">Reservations</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

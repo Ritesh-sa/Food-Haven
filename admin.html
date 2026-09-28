@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Food Haven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a class="brand" href="index.html">✦ Food Haven</a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Reservation</a>
+        <a class="active" href="admin.html">Admin</a>
+        <a class="nav-cart" href="menu.html#cart">
+            Cart <span id="cartCount">0</span>
+        </a>
+    </nav>
+</header>
+
+<main class="page-wrap">
+    <div class="page-title">
+        <span class="eyebrow">MANAGE YOUR DEMO DATA</span>
+        <h1>Admin <em>Dashboard</em></h1>
+        <p>Reservations and demo orders saved on this device.</p>
+    </div>
+
+    <div class="admin-warning">
+        ⚠ Demo dashboard only. No secure login or cloud database is configured.
+    </div>
+
+    <section class="admin-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">TABLE BOOKINGS</span>
+                <h2>Reservations <em id="reservationCount">(0)</em></h2>
+            </div>
+            <button class="btn btn-outline dark" id="clearReservations">
+                Clear Reservations
+            </button>
+        </div>
+
+        <div id="reservationList" class="admin-list">
+            <p class="empty-state">No reservations yet.</p>
+        </div>
+    </section>
+
+    <section class="admin-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">RECENT CHECKOUTS</span>
+                <h2>Demo <em>Orders</em></h2>
+            </div>
+            <button class="btn btn-outline dark" id="clearOrders">
+                Clear Orders
+            </button>
+        </div>
+
+        <div id="ordersList" class="admin-list">
+            <p class="empty-state">No demo orders yet.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="brand" href="index.html">✦ Food Haven</a>
+    <p>Fresh food, warm hearts. © 2026 Food Haven</p>
+    <div><a href="index.html">Home</a><a href="reservation.html">Reservations</a></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

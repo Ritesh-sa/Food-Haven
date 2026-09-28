@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | Food Haven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a class="brand" href="index.html">✦ Food Haven</a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a class="active" href="reservation.html">Reservation</a>
+        <a href="admin.html">Admin</a>
+        <a class="nav-cart" href="menu.html#cart">
+            Cart <span id="cartCount">0</span>
+        </a>
+    </nav>
+</header>
+
+<main class="page-wrap">
+    <div class="page-title">
+        <span class="eyebrow">A SEAT AT OUR TABLE</span>
+        <h1>Book a <em>Table</em></h1>
+        <p>Tell us when you're coming. We'll take care of the rest.</p>
+    </div>
+
+    <div class="booking-layout">
+        <aside class="booking-aside">
+            <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85"
+                alt="Restaurant interior"
+            >
+
+            <div class="aside-copy">
+                <span class="eyebrow">COME ON IN</span>
+                <h2>Good times<br><em>start here.</em></h2>
+
+                <p>
+                    Planning a catch-up, family dinner, or a little
+                    celebration? We'd love to host you.
+                </p>
+
+                <div class="info-line">◷ Daily · 10:00 AM – 10:00 PM</div>
+                <div class="info-line">⌖ Bhubaneswar, Odisha</div>
+            </div>
+        </aside>
+
+        <form id="reservationForm" class="booking-form">
+            <h2>Your Reservation</h2>
+            <p class="muted">Fields marked * are required.</p>
+
+            <label for="name">Full Name *</label>
+            <input id="name" name="name" required maxlength="80"
+                   placeholder="Your name">
+
+            <div class="form-row">
+                <div>
+                    <label for="email">Email *</label>
+                    <input id="email" name="email" type="email"
+                           required placeholder="you@example.com">
+                </div>
+
+                <div>
+                    <label for="phone">Phone *</label>
+                    <input id="phone" name="phone" type="tel"
+                           required pattern="[0-9+() -]{8,18}"
+                           placeholder="+91 98765 43210">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div>
+                    <label for="date">Date *</label>
+                    <input id="date" name="date" type="date" required>
+                </div>
+
+                <div>
+                    <label for="time">Time *</label>
+                    <select id="time" name="time" required>
+                        <option value="">Choose a time</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>01:00 PM</option>
+                        <option>02:00 PM</option>
+                        <option>03:00 PM</option>
+                        <option>04:00 PM</option>
+                        <option>05:00 PM</option>
+                        <option>06:00 PM</option>
+                        <option>07:00 PM</option>
+                        <option>08:00 PM</option>
+                        <option>09:00 PM</option>
+                        <option>10:00 PM</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="guests">Number of Guests *</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select guests</option>
+                <option>1</option><option>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+                <option>7</option><option>8</option><option>9</option>
+                <option>10</option>
+            </select>
+
+            <label for="notes">Special Request (Optional)</label>
+            <textarea id="notes" name="notes" rows="3"
+                      maxlength="500"
+                      placeholder="Any special occasion or request?"></textarea>
+
+            <button class="btn btn-primary" type="submit">
+                Confirm Reservation ↗
+            </button>
+
+            <p class="fine-print">
+                Demo project: reservation details are stored in this browser.
+            </p>
+
+            <p id="reservationMessage" class="form-message"></p>
+        </form>
+    </div>
+</main>
+
+<footer class="footer">
+    <a class="brand" href="index.html">✦ Food Haven</a>
+    <p>Fresh food, warm hearts. © 2026 Food Haven</p>
+    <div><a href="menu.html">Menu</a><a href="admin.html">Admin</a></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
